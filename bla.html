@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Imperativ Programming
+
+        arr = [1,2,3,4,5,6,7,8];
+        for(a in arr){
+            console.log(`result = ${arr[a] + 1}`);
+        }
+
+        j = 0;
+        i = arr[j];
+        while(i<8){
+            console.log(`result = ${arr[j]}`);
+            j++;
+            i = arr[j];
+        }
+
+        //Object Oriented Programming
+
+        class Vehicle {
+            constructor(name, maker, engine){
+                this.name = name;
+                this.maker = maker;
+                this.engine = engine;
+            }
+            getDetails(){
+                return (`The name of the bike is ${this.name}.`);
+            }
+        }
+        let bike1  = new Vehicle('Hayabus', 'Suzuki', '1340cc');
+        let bike2 = new Vehicle('Ninaja', 'Kawasake', '998cc');
+
+        console.log(bike1.name);
+        console.log(bike2.maker);
+        console.log(bike1.getDetails());
+        
+
+
+        //Funcional Programming
+
+        var greet = function(platform){
+            console.log("Welcome to", platform);
+        };
+        greet("GeeksforGeeks!");
+
+        var greet = () => {
+            console.log("Welcome to GeeksforGeeks!");
+        }
+        greet();
+
+        ((parameter) => 
+            {console.log("Welcome to",parameter);
+        })("GeeksforGeeks!");
+
+
+        arr = [2,4,6,8];
+
+        items = arr.map(function(x) {
+        return Math.pow(x, 2);
+        });
+
+        console.log(items);  // Returns [4, 16, 36, 64]
+
+        squareIt = function(x) {
+        return Math.pow(x, 2);
+        }
+
+        otherItems = arr.map(squareIt);
+
+        console.log(otherItems); // Returns [4, 16, 36, 64]
+    </script>
+</body>
+</html>
